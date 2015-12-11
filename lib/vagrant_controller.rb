@@ -1,0 +1,2 @@
+class VagrantController
+end
