@@ -6,5 +6,8 @@ require 'webgen/vagrant_controller'
 
 class WebGen
   #set up environment variables
-  #
+  #display webgen ascii art to console, because if theres no ascii art then it isnt really a project is it
+
+  #output environment variables
+
 end
