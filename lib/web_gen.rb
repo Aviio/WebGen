@@ -1,5 +1,4 @@
 # Wrapper class for webgen, allows a user to generate a randomised vulnerable website using command line arguments
-require_relative 'webgen/xml_reader'
 require_relative 'webgen/webgen_engine'
 require_relative 'webgen/file_system_helper'
 
@@ -12,10 +11,8 @@ class WebGen
   VULNERABILITY_DEFINITIONS_LOCATION = "#{ROOT_DIR}/config/vulnerabilityDefinitions.xml"
   CONFIG_LOCATIONS = [WEBGEN_CONFIG_LOCATION,
                       TEMPLATE_DEFINITIONS_LOCATION,
-                      VULNERABILITY_DEFINITIONS_LOCATION]
+                      VULNERABILITY_DEFINITIONS_LOCATION]rem
 
-  #set up environment variables
-  xml_reader = XmlReader.new
   file_system_helper = FileSystemHelper.new
   webgen_engine = WebgenEngine.new
 
