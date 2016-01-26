@@ -1,0 +1,19 @@
+<WebGen>
+  <Sites>
+    <Site>
+      <Template></Template>
+      <Vulnerabilities>
+        <Vulnerability>
+          <Type>sqli</Type>
+        </Vulnerability>
+        <Vulnerability>
+          <Type>xss</Type>
+        </Vulnerability>
+      </Vulnerabilities>
+      <Url></Url>
+    </Site>
+    <Site>
+
+    </Site>
+  </Sites>
+</WebGen>
