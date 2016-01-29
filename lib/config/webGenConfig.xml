@@ -1,19 +1,4 @@
-<WebGen>
-  <Sites>
-    <Site>
-      <TemplateId></TemplateId>
-      <Url></Url>
-      <Vulnerabilities>
-        <Vulnerability>
-          <Type>sqli</Type>
-        </Vulnerability>
-        <Vulnerability>
-          <Type>xss</Type>
-        </Vulnerability>
-      </Vulnerabilities>
-    </Site>
-    <Site>
-
-    </Site>
-  </Sites>
-</WebGen>
+<WebGenConfiguration>
+    <MaxSites>2</MaxSites>
+    <MaxVulnSites>1</MaxVulnSites>
+</WebGenConfiguration>

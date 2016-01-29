@@ -1,15 +1,17 @@
 class WebgenEngine
-
   #Generate vulnerable websites
   public def generate
-     configurationObject = analyze_config
 
 
   end
 
-  # analyze the config for randomization
-  private def analyze_config
+  private def analyze_xml
+
+            #get count of sites
+            #if > 0 site has been specified, if not then randomize a site, using some options from the webgen config
+
 
   end
+
 
 end
