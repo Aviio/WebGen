@@ -16,13 +16,10 @@ class WebGen
 
   file_system_helper = FileSystemHelper.new
   webgen_engine = WebgenEngine.new
-
   #display core ascii art to console, because if theres no ascii art then it isnt really a project.
   file_system_helper.output_ascii
-
   #make sure config locations have configs present
   file_system_helper.check_configs(CONFIG_LOCATIONS)
-
 
 
 end

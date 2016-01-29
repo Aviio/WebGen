@@ -1,7 +1,8 @@
 <WebGen>
   <Sites>
     <Site>
-      <Template></Template>
+      <TemplateId></TemplateId>
+      <Url></Url>
       <Vulnerabilities>
         <Vulnerability>
           <Type>sqli</Type>
@@ -10,7 +11,6 @@
           <Type>xss</Type>
         </Vulnerability>
       </Vulnerabilities>
-      <Url></Url>
     </Site>
     <Site>
 
