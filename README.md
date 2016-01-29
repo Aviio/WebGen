@@ -1,10 +1,7 @@
- __    __     _
-/ / /\ \ \___| |__   __ _  ___ _ __
-\ \/  \/ / _ \ '_ \ / _` |/ _ \ '_ \
- \  /\  /  __/ |_) | (_| |  __/ | | |
-  \/  \/ \___|_.__/ \__, |\___|_| |_|
-                    |___/
-A module for creating randomized vulnerable
-web applications.
+WebGen - A module for creating randomized vulnerable web applications
 
-             Created by Connor Wilson
+*Configuration*
+webGenConfig - Contains rules for webgen to follow when generating vulnerable web applications.
+generate - Contains strict contracts for webgen to generate web applicaitons against.
+vulnerabilityDefinitions - Contains definitions for certain vulnerabilities so webgen knows where to look to insert them
+templateDefinitions - Contains definitions for web application templates so webgen knows where to look to base the app on
