@@ -1,17 +1,19 @@
 class WebgenEngine
   #Generate vulnerable websites
-  public def generate
+  def generate(config_locations)
+    puts "in generate"
+    siteHash = get_site_hashes(config_locations[:sites])
+    
+  end
 
+
+
+  def get_site_hashes(site_location)
 
   end
 
-  private def analyze_xml
-
-            #get count of sites
-            #if > 0 site has been specified, if not then randomize a site, using some options from the webgen config
-
+  def generate_random_site_hash
 
   end
-
 
 end

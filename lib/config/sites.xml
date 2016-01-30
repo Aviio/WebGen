@@ -1,0 +1,12 @@
+<Sites>
+  <Site>
+    <TemplateId></TemplateId>
+    <Description></Description>
+    <Vulnerabilities>
+      <Vulnerability>
+        <Id></Id>
+        <Description></Description>
+      </Vulnerability>
+    </Vulnerabilities>
+  </Site>
+</Sites>
