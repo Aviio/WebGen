@@ -1,11 +1,11 @@
 <Sites>
   <Site>
-    <TemplateId></TemplateId>
-    <Description></Description>
+    <TemplateId>1</TemplateId>
+    <Description>A simple blogging platform</Description>
     <Vulnerabilities>
       <Vulnerability>
-        <Id></Id>
-        <Description></Description>
+        <Id>sql-1</Id>
+        <Description>A SQL Injection based vulnerability using string concatenation</Description>
       </Vulnerability>
     </Vulnerabilities>
   </Site>

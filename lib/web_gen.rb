@@ -9,14 +9,14 @@ class WebGen
   #system configuration constant - there should always be one in BaseDir/config/webGenConfig.xml
   WEBGEN_CONFIG_LOCATION = "#{ROOT_DIR}/config/webGenConfig.xml"
   TEMPLATE_DEFINITIONS_LOCATION = "#{ROOT_DIR}/config/templateDefinitions.xml"
-  VULNERABILITY_DEFINITIONS_LOCATION = "#{ROOT_DIR}/config/vulnerabilityDefinitions.xml"
+  VULN_DEFINITIONS_LOCATION = "#{ROOT_DIR}/config/vulnerabilityDefinitions.xml"
   SITES_LOCATION = "#{ROOT_DIR}/config/sites.xml"
 
   #config location hash to pass to engine
   CONFIG_LOCATIONS = {
       :webgenConfig => WEBGEN_CONFIG_LOCATION,
       :templateDefinitions => TEMPLATE_DEFINITIONS_LOCATION,
-      :vulnerabilityDefinitions => VULNERABILITY_DEFINITIONS_LOCATION,
+      :vulnerabilityDefinitions => VULN_DEFINITIONS_LOCATION,
       :sites => SITES_LOCATION
   }
 
@@ -24,8 +24,12 @@ class WebGen
   webgen_engine = WebgenEngine.new
   #display core ascii art to console, because if theres no ascii art then it isnt really a project.
   file_system_helper.output_ascii
+  puts 'Checking WebGen Configurations:'
   #make sure config locations have configs present
   file_system_helper.check_configs(CONFIG_LOCATIONS)
+  puts
+  puts '---------------------------------'
+  puts
 
   webgen_engine.generate(CONFIG_LOCATIONS)
 
