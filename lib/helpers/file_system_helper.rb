@@ -8,11 +8,11 @@ class FileSystemHelper
   end
 
   def check_configs(config_locations)
-    config_locations.each do |config|
-      if File.exist?(config)
-        puts config + ' exists'
+    config_locations.each do |name, value|
+      if File.exist?(value)
+        puts name.to_s + ' exists'
       else
-        puts config + ' is missing!'
+        puts name.to_s + ' is missing!'
       end
     end
 

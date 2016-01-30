@@ -10,9 +10,15 @@ class WebGen
   WEBGEN_CONFIG_LOCATION = "#{ROOT_DIR}/config/webGenConfig.xml"
   TEMPLATE_DEFINITIONS_LOCATION = "#{ROOT_DIR}/config/templateDefinitions.xml"
   VULNERABILITY_DEFINITIONS_LOCATION = "#{ROOT_DIR}/config/vulnerabilityDefinitions.xml"
-  CONFIG_LOCATIONS = [WEBGEN_CONFIG_LOCATION,
-                      TEMPLATE_DEFINITIONS_LOCATION,
-                      VULNERABILITY_DEFINITIONS_LOCATION]
+  SITES_LOCATION = "#{ROOT_DIR}/config/sites.xml"
+
+  #config location hash to pass to engine
+  CONFIG_LOCATIONS = {
+      :webgenConfig => WEBGEN_CONFIG_LOCATION,
+      :templateDefinitions => TEMPLATE_DEFINITIONS_LOCATION,
+      :vulnerabilityDefinitions => VULNERABILITY_DEFINITIONS_LOCATION,
+      :sites => SITES_LOCATION
+  }
 
   file_system_helper = FileSystemHelper.new
   webgen_engine = WebgenEngine.new
@@ -21,5 +27,6 @@ class WebGen
   #make sure config locations have configs present
   file_system_helper.check_configs(CONFIG_LOCATIONS)
 
+  webgen_engine.generate(CONFIG_LOCATIONS)
 
 end
