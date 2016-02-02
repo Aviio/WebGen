@@ -7,6 +7,7 @@ class FileSystemHelper
     end
   end
 
+  #todo: unit test this
   def check_configs(config_locations)
     configs_are_present = true
     config_locations.each do |name, value|

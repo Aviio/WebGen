@@ -1,0 +1,10 @@
+<Templates>
+  <Template>
+    <Id>1</Id>
+    <Description>A blogging template</Description>
+    <Vulnerabilities>
+      <Vulnerability>sqli</Vulnerability>
+      <Vulnerability>xss</Vulnerability>
+    </Vulnerabilities>
+  </Template>
+</Templates>
