@@ -1,12 +1,20 @@
 require_relative '../../lib/helpers/xml_helper'
+require_relative '../../lib/validators/config_validator'
 class WebgenEngine
   def initialize
     @xml_helper = XmlHelper.new
+    @config_validator = ConfigValidator.new
   end
   public
   #Generate a vulnerable web application based on the sites configuration
   def generate(config_locations)
-    #todo: validate that these exist
+
+    config_locations_are_valid = @config_validator.validate_config_locations(config_locations)
+
+    unless config_locations_are_valid
+      #exit gracefully
+    end
+
     sites_hash = @xml_helper.xml_to_hash(config_locations[:sites])
     template_definitions_hash = @xml_helper.xml_to_hash(config_locations[:templateDefinitions])
     vulnerability_definitions_hash = @xml_helper.xml_to_hash(config_locations[:vulnerabilityDefinitions])
