@@ -9,4 +9,14 @@
       </Vulnerability>
     </Vulnerabilities>
   </Site>
+  <Site>
+    <TemplateId>2</TemplateId>
+    <Description>A simple blogging platform</Description>
+    <Vulnerabilities>
+      <Vulnerability>
+        <Id>sql-1</Id>
+        <Description>A SQL Injection based vulnerability using string concatenation</Description>
+      </Vulnerability>
+    </Vulnerabilities>
+  </Site>
 </Sites>

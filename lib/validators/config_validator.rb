@@ -16,7 +16,7 @@ class ConfigValidator
         end
 
       end
-      puts "---------------------------------\n"
+      puts "\n---------------------------------\n"
       configs_are_present
     end
 end

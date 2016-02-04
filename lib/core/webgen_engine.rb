@@ -1,9 +1,11 @@
 require_relative '../../lib/helpers/xml_helper'
 require_relative '../../lib/validators/config_validator'
+require_relative '../../lib/helpers/output_helper'
 class WebgenEngine
   def initialize
     @xml_helper = XmlHelper.new
     @config_validator = ConfigValidator.new
+    @output_helper = OutputHelper.new
   end
   public
   #Generate a vulnerable web application based on the sites configuration
@@ -20,16 +22,12 @@ class WebgenEngine
     vulnerability_definitions_hash = @xml_helper.xml_to_hash(config_locations[:vulnerabilityDefinitions])
     webgen_config_hash = @xml_helper.xml_to_hash(config_locations[:webgenConfig])
     #todo: split this out into a hash analyzer
-
-    if webgen_config_hash['Randomized'] == 'true'
+    if webgen_config_hash['Randomized'][0] == 'true'
+      puts 'Generating randomly vulnerable site'
       generate_random(template_definitions_hash, vulnerability_definitions_hash)
     else
-      number_of_sites = sites_hash.size
-      if number_of_sites == 1
-        puts "There is #{number_of_sites} site defined in the sites config"
-      else
-        puts "There are #{number_of_sites} sites defined in the sites config"
-      end
+     @output_helper.count_sites(sites_hash)
+      generate_specified(sites_hash)
       #for each site in sites, generate a specified site
     end
   end
@@ -37,8 +35,13 @@ class WebgenEngine
   private
   #Generate a randomized web application
   def generate_random(template_definitions_hash, vulnerability_definitions_hash)
-    puts 'Generating randomly vulnerable site'
-    #select a random template from template defs
+
+    number_of_templates = template_definitions_hash['Template'].size
+    random_number = rand(1..number_of_templates)
+    puts random_number
+    selected_template = template_definitions_hash['Template'][random_number - 1]
+    puts selected_template
+
     #match the vulnerability id's on that template to ones in vuln defs
     #create site hash
     #pass to generate specified

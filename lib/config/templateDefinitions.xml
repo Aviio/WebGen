@@ -5,6 +5,36 @@
     <Vulnerabilities>
       <Vulnerability>sqli</Vulnerability>
       <Vulnerability>xss</Vulnerability>
+      <Vulnerability>weakpass</Vulnerability>
     </Vulnerabilities>
+    <Root>blog</Root>
+  </Template>
+  <Template>
+    <Id>2</Id>
+    <Description>An E-commerce template</Description>
+    <Vulnerabilities>
+      <Vulnerability>sqli</Vulnerability>
+      <Vulnerability>xss</Vulnerability>
+      <Vulnerability>permissions</Vulnerability>
+    </Vulnerabilities>
+    <Root>e-commerce</Root>
+  </Template>
+  <Template>
+    <Id>3</Id>
+    <Description>A test template</Description>
+    <Vulnerabilities>
+      <Vulnerability>sqli</Vulnerability>
+      <Vulnerability>xss</Vulnerability>
+    </Vulnerabilities>
+    <Root>test1</Root>
+  </Template>
+  <Template>
+    <Id>4</Id>
+    <Description>Another test template</Description>
+    <Vulnerabilities>
+      <Vulnerability>sqli</Vulnerability>
+      <Vulnerability></Vulnerability>
+    </Vulnerabilities>
+    <Root>test2</Root>
   </Template>
 </Templates>

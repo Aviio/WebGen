@@ -2,6 +2,7 @@
 # This should be as lightweight as possible to aid integration to SecGen
 require_relative 'core/webgen_engine'
 require_relative 'helpers/file_system_helper'
+require_relative 'helpers/output_helper'
 
 class WebGen
 
@@ -21,9 +22,10 @@ class WebGen
   }
 
   file_system_helper = FileSystemHelper.new
+  output_helper = OutputHelper.new
   webgen_engine = WebgenEngine.new
   #display core ascii art to console, because if theres no ascii art then it isnt really a project.
-  file_system_helper.output_ascii
+  output_helper.output_ascii
   webgen_engine.generate(CONFIG_LOCATIONS)
 
 end
