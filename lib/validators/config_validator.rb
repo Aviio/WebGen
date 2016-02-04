@@ -1,12 +1,12 @@
+#Validates configuration file locations and contentmodified the
 class ConfigValidator
 
   def validate_config_locations(config_locations)
       configs_are_present = true
-      puts 'Checking WebGen Configurations:'
+
       #make sure config locations have configs present
-      puts
-      puts '---------------------------------'
-      puts
+      puts "\n---------------------------------\n"
+      puts "Checking WebGen Configurations:\n\n"
       config_locations.each do |name, value|
         if File.exist?(value)
           puts name.to_s + ' exists'
@@ -16,6 +16,7 @@ class ConfigValidator
         end
 
       end
+      puts "---------------------------------\n"
       configs_are_present
     end
 end
