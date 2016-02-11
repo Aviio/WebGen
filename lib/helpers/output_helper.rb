@@ -1,8 +1,7 @@
 class OutputHelper
 
   def count_sites(sites_hash)
-    puts sites_hash
-    number_of_sites = sites_hash['site'].size
+    number_of_sites = sites_hash.size
     if number_of_sites == 1
       puts "There is #{number_of_sites} site defined in the sites config"
     else
