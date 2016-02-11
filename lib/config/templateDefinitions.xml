@@ -1,40 +1,16 @@
-<Templates>
-  <Template>
-    <Id>1</Id>
-    <Description>A blogging template</Description>
-    <Vulnerabilities>
-      <Vulnerability>sqli</Vulnerability>
-      <Vulnerability>xss</Vulnerability>
-      <Vulnerability>weakpass</Vulnerability>
-    </Vulnerabilities>
-    <Root>blog</Root>
-  </Template>
-  <Template>
-    <Id>2</Id>
-    <Description>An E-commerce template</Description>
-    <Vulnerabilities>
-      <Vulnerability>sqli</Vulnerability>
-      <Vulnerability>xss</Vulnerability>
-      <Vulnerability>permissions</Vulnerability>
-    </Vulnerabilities>
-    <Root>e-commerce</Root>
-  </Template>
-  <Template>
-    <Id>3</Id>
-    <Description>A test template</Description>
-    <Vulnerabilities>
-      <Vulnerability>sqli</Vulnerability>
-      <Vulnerability>xss</Vulnerability>
-    </Vulnerabilities>
-    <Root>test1</Root>
-  </Template>
-  <Template>
-    <Id>4</Id>
-    <Description>Another test template</Description>
-    <Vulnerabilities>
-      <Vulnerability>sqli</Vulnerability>
-      <Vulnerability></Vulnerability>
-    </Vulnerabilities>
-    <Root>test2</Root>
-  </Template>
-</Templates>
+<templates>
+  <template id="1" description="A blogging template" root="blog">
+      <vulnerability>sqli</vulnerability>
+      <vulnerability>xss</vulnerability>
+      <vulnerability>weakpass</vulnerability>
+  </template>
+  <template id="2" description="An E-commerce template" root="ecommerce">
+      <vulnerability>sqli</vulnerability>
+      <vulnerability>xss</vulnerability>
+      <vulnerability>permissions</vulnerability>
+  </template>
+  <template id="3" description="A test Template" root="test1">
+      <vulnerability>sqli</vulnerability>
+      <vulnerability>xss</vulnerability>
+  </template>
+</templates>

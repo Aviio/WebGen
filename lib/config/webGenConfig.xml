@@ -1,5 +1,5 @@
-<WebGenConfiguration>
-    <Randomized>false</Randomized>
-    <MaxSites>2</MaxSites>
-    <MaxVulnSites>1</MaxVulnSites>
-</WebGenConfiguration>
+<configuration>
+    <randomized>false</randomized>
+    <maxsites>2</maxsites>
+    <maxvulnsites>1</maxvulnsites>
+</configuration>
