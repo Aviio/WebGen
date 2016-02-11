@@ -1,5 +1,7 @@
 WebGen - A module for creating randomized vulnerable web applications
 
+[![Build Status](https://travis-ci.org/Aviio/WebGen.svg?branch=master)](https://travis-ci.org/Aviio/WebGen)
+
 **Configuration**
 
 
