@@ -1,10 +1,15 @@
 <sites>
-  <site templateId="1" description="A simple blogging platform">
-    <vulnerability id="1" description="A SQL Injection based vulnerability using string concatenation" location=""/>
-    <vulnerability id="2" description="A SQL Injection based vulnerability using string concatenation" location=""/>
-    <vulnerability id="3" description="A SQL Injection based vulnerability using string concatenation" location=""/>
-  </site>
-  <site templateId="2" description="A simple e-commerce platform">
-    <vulnerability id="1" description="A SQL Injection based vulnerability using string concatenation"/>
+  <site templateId="1"
+        description="A simple blogging platform"
+        location="">
+    <vulnerability id="1"
+                   description="A SQL Injection based vulnerability using string concatenation"
+                   location=""/>
+    <vulnerability id="2"
+                   description="A SQL Injection based vulnerability using string concatenation"
+                   location=""/>
+    <vulnerability id="3"
+                   description="A SQL Injection based vulnerability using string concatenation"
+                   location=""/>
   </site>
 </sites>

@@ -1,16 +1,7 @@
 <templates>
   <template id="1" description="A blogging template" root="blog">
-      <vulnerability>sqli</vulnerability>
-      <vulnerability>xss</vulnerability>
-      <vulnerability>weakpass</vulnerability>
-  </template>
-  <template id="2" description="An E-commerce template" root="ecommerce">
-      <vulnerability>sqli</vulnerability>
-      <vulnerability>xss</vulnerability>
-      <vulnerability>permissions</vulnerability>
-  </template>
-  <template id="3" description="A test Template" root="test1">
-      <vulnerability>sqli</vulnerability>
-      <vulnerability>xss</vulnerability>
+      <vulnerabilityid>1</vulnerabilityid>
+      <vulnerabilityid>2</vulnerabilityid>
+      <vulnerabilityid>3</vulnerabilityid>
   </template>
 </templates>

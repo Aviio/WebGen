@@ -25,7 +25,6 @@ class WebgenEngine
     webgen_config_hash = @xml_helper.xml_to_hash(config_locations[:webgenConfig])
     #todo: split this out into a hash analyzer
     puts webgen_config_hash
-    puts 'ping'
     if webgen_config_hash['randomized'][0] == 'true'
       puts 'Generating randomly vulnerable site'
       @site_randomizer.generate_random(template_definitions_hash, vulnerability_definitions_hash)
@@ -37,10 +36,6 @@ class WebgenEngine
   end
 
   private
-  #todo: split this out into random site creator
-  #Generate a randomized web application
-
-
   #Generate a web application against a site hash
   def generate_specified(site)
     puts site
