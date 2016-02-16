@@ -3,6 +3,7 @@ require 'xmlsimple'
 class XmlHelper
 
   #todo: unit test this
+  #todo: add seperate converters for each type of configuration, this needs to be done so that the keyattr can be set differently
   def xml_to_hash(config_location)
       if File.exist? config_location
         return XmlSimple.xml_in(config_location, { 'KeyAttr' => 'templateId' })
